@@ -1,0 +1,11 @@
+import numpy
+a = numpy.pi / 3
+from sympy import *
+x = symbols('x')
+expr = sin(x)
+f = lambdify(x, expr, 'numpy')
+f(a)
+0.8660254037844386
+a=expr.subs(x, pi/3)
+print(a)
+

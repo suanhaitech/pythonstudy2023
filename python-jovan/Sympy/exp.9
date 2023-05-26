@@ -1,0 +1,8 @@
+from sympy import *
+M = Matrix([[3, -2,  4, -2], [5,  3, -3, -2], [5, -2,  2, -2], [5, -2, -3,  3]])
+M.eigenvals()
+print(M)
+h = symbols('h')
+p = M.charpoly(h)
+q=factor(p)
+print(p)

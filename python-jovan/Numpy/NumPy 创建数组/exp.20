@@ -1,0 +1,9 @@
+import numpy as np
+
+#创建一个3x3的二维数组
+a=np.array([[1,2,3],[3,4,6],[7,5,8]])
+
+#创建一个与a形状相同的，所以元素为1的数组
+ones_a=np.ones_like(a)
+print(ones_a)
+

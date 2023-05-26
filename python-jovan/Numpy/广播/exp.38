@@ -1,0 +1,7 @@
+import numpy as np
+a = np.arange(0, 10, 3).reshape(-1, 1) # (4, 1)
+b = np.array([1, 2]) # (2, )
+print(a)
+print(b)
+c = a*b # (4, 1)--> (4, 2)   (2, ) --> (4, 2)
+print(c)

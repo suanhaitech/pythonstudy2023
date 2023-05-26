@@ -1,0 +1,7 @@
+import numpy as np 
+ 
+x=np.arange(32).reshape((8,4))
+print(x)
+# 二维数组读取指定下标对应的行
+print("-------读取下标对应的行-------")
+print (x[[4,2,1,7]])

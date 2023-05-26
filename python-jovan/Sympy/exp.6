@@ -1,0 +1,19 @@
+from sympy import *
+#将多项式展开
+x_1 = symbols('x_1')
+a=expand((x_1 + 1)**2)
+#多项式进行因式分解
+x,y,z=symbols('x,y,z')
+b=factor(x**3 - x**2 + x - 1)
+print(b)
+#合并同类项
+expr = x*y + x - 3 + 2*x**2 - z*x**2 + x**3
+c=collect(expr, x)
+print(c)
+#有理分式化简
+d=cancel((x**2 + 2*x + 1)/(x**2 + x))
+print(d)
+#部分分式展开
+f= (4*x**3 + 21*x**2 + 10*x + 12)/(x**4 + 5*x**3 + 5*x**2 + 4*x)
+print(f)
+

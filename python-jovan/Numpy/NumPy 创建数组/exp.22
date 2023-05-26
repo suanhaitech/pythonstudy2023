@@ -1,0 +1,10 @@
+import numpy as np
+
+#使用range函数创建列表对象
+list=range(5)
+it=iter(list)
+
+#使用迭代器创建ndarray
+x=np.fromiter(it,dtype=float)
+print(x)
+
