@@ -1,0 +1,11 @@
+import numpy as np
+a=np.array([(3,4,5),(6,7,8)])
+b=np.arange(12,step=2).reshape(2,3)
+print("a*b=",a*b)
+print("----------------")
+c=np.array([(1,2,3)])
+print("a*c=",a*c)
+print("----------------")
+d=np.array([(1,2)]).reshape(2,1)
+print("a*d=",a*d)
+print(a+b*c)
