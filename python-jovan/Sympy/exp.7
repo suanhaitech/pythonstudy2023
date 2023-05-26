@@ -1,0 +1,30 @@
+from sympy import *
+x,y,z=symbols('x,y,z')
+a=diff(cos(x), x)
+print(a)
+b=diff(x**4, x, 3)
+print(b)
+#求偏导
+expr = exp(x*y*z)
+c=diff(expr, x)
+print(c)
+#积分
+d=integrate(cos(x), x)
+print(d)
+#求定积分
+e=integrate(exp(-x), (x, 0, oo))
+print(e)
+#求极限
+f=limit(1/x, x, 0, '+')
+print(f)
+#求级数展开
+expr = sin(x)
+g=expr.series(x, 0, 4)
+print(g)
+#求解方程
+f = symbols('f', cls = Function)
+solveset(Eq(x**2 - x, 0), x, domain = S.Reals)
+diffeq = Eq(f(x).diff(x, 2) - 2*f(x).diff(x) + f(x), sin(x))
+diffeq
+
+

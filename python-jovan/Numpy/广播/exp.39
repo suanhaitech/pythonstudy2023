@@ -1,0 +1,8 @@
+import numpy as np
+x = np.arange(36).reshape(4, 9)
+a=np.sum(x, axis=0)
+b=np.sum(x, axis=1)
+c=np.sum(x, axis=(0, 1))
+print(a)
+print(b)
+print(c)

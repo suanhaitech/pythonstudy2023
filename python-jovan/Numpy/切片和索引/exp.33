@@ -1,0 +1,11 @@
+import numpy as np
+
+x = np.arange(9)
+print(x)
+# 一维数组读取指定下标对应的元素
+print("-------读取下标对应的元素-------")
+x2 = x[[0, 6]] # 使用花式索引
+print(x2)
+
+print(x2[0])
+print(x2[1])

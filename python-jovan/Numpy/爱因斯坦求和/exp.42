@@ -1,0 +1,7 @@
+import numpy as np
+A = np.arange(0, 12).reshape(3, 4)
+print(A)
+B = np.arange(0, 12).reshape(3, 4)
+print(B)
+C = np.einsum('ij,ij->', A, B)
+print(C)

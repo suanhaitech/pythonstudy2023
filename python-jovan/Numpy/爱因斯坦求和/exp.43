@@ -1,0 +1,14 @@
+import numpy as np
+from fealpy.mesh import MeshFactory as MF
+from fealpy.functionspace import LagrangeFiniteElementSpace
+#建立初始网格和空间
+mesh = MF.boxmesh2d([0, 1, 0, 1], nx=10, ny=10, meshtype='tri')
+space = LagrangeFiniteElementSpace(mesh, p=1)
+#获取数值积分的积分点和积分权重
+qf = mesh.integrator(4, 'cell')
+bcs, ws = qf.get_quadrature_points_and_weights()
+cellmeasure = mesh.entity_measure('cell')
+#获取空间基基函数
+phi = space.basis(bcs)
+#刚度矩阵组装
+H = np.einsum('q, qci, qcj, c -> cij', ws, phi, phi, cellmeasure)
