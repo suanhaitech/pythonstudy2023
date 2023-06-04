@@ -1,0 +1,11 @@
+import numpy as np
+b = np.zeros(shape = (4,4), dtype = float, order = 'C')
+c = np.ones(shape = (4,4), dtype = None, order = 'C')
+d = np.zeros_like(c, dtype=None, order='K', subok=True, shape=None)
+e = np.ones_like(b, dtype=None, order='K', subok=True, shape=None)
+f = np.arange(1, 20, step=5, dtype=None)
+g = np.linspace(1, 20, num=10, endpoint=True, retstep=False, dtype=None)
+print(b)
+print(c)
+print(d)
+print(e)
